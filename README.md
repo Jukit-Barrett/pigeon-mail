@@ -1,6 +1,6 @@
 # Pigeon Mail
 
-Pigeon Mail 是 PHPMailer 封装，将邮件更加简单稳定。
+Pigeon Mail 是 PHPMailer 封装，使邮件发送更加简单、稳定。
 
 ## 示例
 
