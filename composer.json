@@ -1,0 +1,46 @@
+{
+    "name": "mrzkit/pigeon-mail",
+    "type": "library",
+    "description": "PHPMailer library",
+    "license": "Apache-2.0",
+    "keywords": [
+        "pigeon",
+        "imap",
+        "mail",
+        "php-imap",
+        "kitgor"
+    ],
+    "homepage": "https://gitee.com/kitgor/pigeon-mail",
+    "authors": [
+        {
+            "name": "Kitgor",
+            "email": "kitgor.architect@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "webklex/php-imap": "^4.1",
+        "phpmailer/phpmailer": "^6.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.10",
+        "symfony/var-dumper": "^5.4"
+    },
+    "suggest": {
+        "symfony/mime": "Recomended for better extension support",
+        "symfony/var-dumper": "Usefull tool for debugging"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mrzkit\\PigeonMail\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mrzkit\\PigeonMailTest\\": "test/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
