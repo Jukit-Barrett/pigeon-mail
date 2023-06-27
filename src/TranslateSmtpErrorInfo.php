@@ -37,7 +37,7 @@ class TranslateSmtpErrorInfo
         //去重
         $match = array_flip(array_flip($match[0]));
 
-        return join(",", $match) . ":";
+        return implode(",", $match) . ":";
     }
 
     /**
@@ -50,7 +50,7 @@ class TranslateSmtpErrorInfo
 
         if (empty($errorInfo)) return '';
 
-        $email = self::matchEmail($errorInfo);
+        $email = $this->matchEmail();
 
         if (strpos($errorInfo, 'SMTP connect() failed') !== false) {
             return $email . 'SMTP服务连接失败，请检查SMTP服务配置及邮箱地址密码是否正确';

@@ -11,7 +11,7 @@ class DefaultMailConfig implements MailConfigContract
 
     public function __construct(array $config = [])
     {
-        $this->config = empty($config) ? config('mail.mailers.smtp') : $config;
+        $this->config = $config;
     }
 
     public function getDebug() : bool

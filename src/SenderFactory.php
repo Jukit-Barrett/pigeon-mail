@@ -19,9 +19,7 @@ class SenderFactory
     {
         $mailProvider = new MailProvider($mailConfigContract);
 
-        $sender = new Sender($mailTransferContract, $mailProvider);
-
-        return $sender->send();
+        return (new Sender($mailTransferContract, $mailProvider))->send();
     }
 
     /**
@@ -46,8 +44,6 @@ class SenderFactory
 
         $defaultMailConfig = new DefaultMailConfig();
 
-        $send = static::sender($mailTransfer, $defaultMailConfig);
-
-        return $send;
+        return static::sender($mailTransfer, $defaultMailConfig);
     }
 }
